@@ -8,6 +8,10 @@
 
 # The class should have a method display_info that prints out all the student's information in a readable format.
 
+# Create a student object
+# student1 = Student("Alice", 20, 88.5)
+# student1.display_info()
+
 # Expected Output:
 # Name: Alice
 # Age: 20
@@ -34,6 +38,17 @@ student1.display_info()
 #     Attributes account_holder (string), balance (float), and account_number (string).
 #     A method deposit(amount) that adds money to the balance.
 #     A method withdraw(amount) that deducts money from the balance if there are sufficient funds, otherwise prints "Insufficient funds".
+
+# Create a bank account object
+# account1 = BankAccount("John Doe", 1000, "123456789")
+# account1.deposit(500)
+# account1.withdraw(200)
+# account1.withdraw(2000)
+
+# Expected Output:
+# Balance after deposit: 1500
+# Balance after withdrawal: 1300
+# Insufficient funds
 
 class BankAccount():
 	def __init__(self, account_holder, balance ,account_number):
