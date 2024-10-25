@@ -28,4 +28,9 @@ student1 = Student("Alice", 20 , 88.5)
 student1.display_info()
 
 
-		
+# Problem 2: Bank Account Class
+# Create a BankAccount class with:
+
+#     Attributes account_holder (string), balance (float), and account_number (string).
+#     A method deposit(amount) that adds money to the balance.
+#     A method withdraw(amount) that deducts money from the balance if there are sufficient funds, otherwise prints "Insufficient funds".		
