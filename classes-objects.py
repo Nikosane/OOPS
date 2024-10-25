@@ -33,4 +33,28 @@ student1.display_info()
 
 #     Attributes account_holder (string), balance (float), and account_number (string).
 #     A method deposit(amount) that adds money to the balance.
-#     A method withdraw(amount) that deducts money from the balance if there are sufficient funds, otherwise prints "Insufficient funds".		
+#     A method withdraw(amount) that deducts money from the balance if there are sufficient funds, otherwise prints "Insufficient funds".
+
+class BankAccount():
+	def __init__(self, account_holder, balance ,account_number):
+		self.account_holder = account_holder
+		self.balance = balance
+		self.account_number = account_number
+
+	def deposit(self):
+		new_amount = int(input("Enter the amount you want to deposit: "))
+		self.balance += new_amount 
+		print(f"Balance after deposit: {self.balance}")
+
+	def withdraw(self):
+		amount = int(input("Enter the amount you want to withdraw: "))
+		if amount > self.balance:
+			print("Insufficient funds")
+		else:
+			self.balance -= amount
+			print(f"Balance after withrawal: {self.balance}")
+
+
+account1 = BankAccount("John Doe", 1000, "123456789")
+account1.deposit()
+account1.withdraw()		
