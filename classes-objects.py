@@ -79,4 +79,20 @@ account1.withdraw()
 # Create a Rectangle class with:
 
 #     Attributes length and width.
-#     Methods area() and perimeter() that calculate and return the area and perimeter of the rectangle, respectively.		
+#     Methods area() and perimeter() that calculate and return the area and perimeter of the rectangle, respectively.
+
+class Rectangle():
+	def __init__(self, length, width):
+		self.length = length
+		self.width = width
+
+	def area(self):
+		area = self.length * self.width
+		print(f"Area: {area}")
+
+	def perimeter(self):
+		print(f"Perimeter: {2*(self.length + self.width)}")
+
+rect1 = Rectangle(4,5)
+rect1.area()
+rect1.perimeter()		
