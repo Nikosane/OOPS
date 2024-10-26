@@ -72,4 +72,11 @@ class BankAccount():
 
 account1 = BankAccount("John Doe", 1000, "123456789")
 account1.deposit()
-account1.withdraw()		
+account1.withdraw()
+
+# Problem 3: Rectangle Class with Area and Perimeter
+
+# Create a Rectangle class with:
+
+#     Attributes length and width.
+#     Methods area() and perimeter() that calculate and return the area and perimeter of the rectangle, respectively.		
