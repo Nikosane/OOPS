@@ -95,4 +95,18 @@ class Rectangle():
 
 rect1 = Rectangle(4,5)
 rect1.area()
-rect1.perimeter()		
+rect1.perimeter()
+
+# Problem 4: Library and Book Classes
+
+# Create a simple model for a library system using two classes: Library and Book.
+
+#     Book: Each book should have:
+#         Attributes title, author, isbn, and status (e.g., "available" or "borrowed").
+#         A method display_details() to print out book information.
+#         A method borrow() that sets the status to "borrowed" if the book is available, otherwise prints "Book is already borrowed."
+#         A method return_book() that sets the status to "available".
+
+#     Library: The library should manage a collection of books with:
+#         An attribute books that holds a list of Book objects.
+#         Methods add_book(book) to add a new book to the collection, remove_book(isbn) to remove a book by its ISBN, and display_books() to display details of all books.		
