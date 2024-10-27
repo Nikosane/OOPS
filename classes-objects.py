@@ -145,4 +145,36 @@ class Book:
 			self.status = "available"
 			print(f"{self.title} has been returned")
 		else:
-			print(f"{self.title} is already available")		
+			print(f"{self.title} is already available")	
+			
+			
+class Library:
+	def __init__(self):
+		self.books = []
+
+	def add_book(self, book):
+		if book not in self.books:
+			self.books.append(book)
+			print(f"{book.title} has been added to Library")
+		else:
+			print(f"{book.title} is already there in Library")
+
+	
+	def remove_book(self, book):
+		if book in self.books:
+			self.books.remove(book)
+			print(f"{book.title} has been removed from the Library")
+
+	def display_books(self):
+		if not self.books:
+			print("no books in the library")
+		else:
+			for book in self.books:
+				book.display_details()
+
+
+
+
+book1 = Book("1984","George Orwell")
+library = Library()
+library.add_book(book1)	
