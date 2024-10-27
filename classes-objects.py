@@ -109,4 +109,17 @@ rect1.perimeter()
 
 #     Library: The library should manage a collection of books with:
 #         An attribute books that holds a list of Book objects.
-#         Methods add_book(book) to add a new book to the collection, remove_book(isbn) to remove a book by its ISBN, and display_books() to display details of all books.		
+#         Methods add_book(book) to add a new book to the collection, remove_book(isbn) to remove a book by its ISBN, and display_books() to display details of all books.
+
+book_list = [
+    {"title": "1984", "author": "George Orwell", "isbn": "12345", "status": "available"},
+    {"title": "To Kill a Mockingbird", "author": "Harper Lee", "isbn": "67890", "status": "available"},
+    {"title": "Pride and Prejudice", "author": "Jane Austen", "isbn": "11223", "status": "available"},
+    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "isbn": "33445", "status": "available"},
+    {"title": "The Catcher in the Rye", "author": "J.D. Salinger", "isbn": "55667", "status": "available"},
+    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "isbn": "77889", "status": "available"},
+    {"title": "Fahrenheit 451", "author": "Ray Bradbury", "isbn": "99001", "status": "available"},
+    {"title": "The Alchemist", "author": "Paulo Coelho", "isbn": "22334", "status": "available"},
+    {"title": "Harry Potter and the Philosopher's Stone", "author": "J.K. Rowling", "isbn": "44556", "status": "available"},
+    {"title": "Moby Dick", "author": "Herman Melville", "isbn": "66778", "status": "available"}
+]		
