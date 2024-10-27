@@ -122,4 +122,27 @@ book_list = [
     {"title": "The Alchemist", "author": "Paulo Coelho", "isbn": "22334", "status": "available"},
     {"title": "Harry Potter and the Philosopher's Stone", "author": "J.K. Rowling", "isbn": "44556", "status": "available"},
     {"title": "Moby Dick", "author": "Herman Melville", "isbn": "66778", "status": "available"}
-]		
+]
+
+class Book:
+	def __init__(self ,title, author, isbn=None, status="available"):
+		self.title = title
+		self.author = author
+		self.isbn = isbn
+		self.status = status
+
+	def display_details(self):
+		print(f"title: {self.title},author: {self.author},isbn: {self.isbn}")
+
+	def borrow(self):
+		if self.status == "available":
+			self.status = "borrowed"
+			print(f"{self.title} has been borrowed")
+
+
+	def return_book(self):
+		if self.status == "borrowed":
+			self.status = "available"
+			print(f"{self.title} has been returned")
+		else:
+			print(f"{self.title} is already available")		
