@@ -177,4 +177,54 @@ class Library:
 
 book1 = Book("1984","George Orwell")
 library = Library()
-library.add_book(book1)	
+library.add_book(book1)
+
+# Problem: Online Shopping Cart
+
+# Create a basic online shopping cart system where users can add products, view their cart, and calculate the total price. There are three classes to implement:
+# 1. Product class
+
+#     Attributes:
+#         name (str): The name of the product
+#         price (float): The price of the product
+#         quantity (int): The quantity of this product added to the cart
+
+#     Methods:
+#         display_product(): Prints the product's name, price, and quantity.
+
+# 2. CartItem class
+
+#     Attributes:
+#         product (Product): A product instance associated with the cart item
+#         quantity (int): Quantity of the product in the cart
+
+#     Methods:
+#         item_total(): Returns the total price for this item based on its price and quantity.
+
+# 3. ShoppingCart class
+
+#     Attributes:
+#         items (list): A list of CartItem objects
+
+#     Methods:
+#         add_item(product, quantity): Adds a CartItem to the cart with the specified quantity.
+#         view_cart(): Displays all items in the cart with their quantities and individual total prices.
+#         calculate_total(): Calculates and returns the total price for all items in the cart.
+
+# Example Usage
+
+#     Create products with a name, price, and default quantity.
+#     Add products to the shopping cart with specified quantities.
+#     View all items in the cart and the total price.
+
+# Sample Output
+
+# plaintext
+
+# # Example output of view_cart()
+# Product: Apple, Price: $2.5, Quantity: 3, Item Total: $7.5
+# Product: Banana, Price: $1.0, Quantity: 5, Item Total: $5.0
+
+# # Example output of calculate_total()
+# Total Cart Price: $12.5
+	
