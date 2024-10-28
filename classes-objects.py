@@ -227,4 +227,67 @@ library.add_book(book1)
 
 # # Example output of calculate_total()
 # Total Cart Price: $12.5
+
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name 
+        self.price = price
+        self.quantity = quantity
+
+    def display_product(self):
+        print(f"Product name: {self.name}, Price: ${self.price}, Quantity: {self.quantity}")
+
+class CartItem:
+    def __init__(self, product, quantity):
+        self.product = product
+        self.quantity = quantity
+
+    def item_total(self):
+        # Calculate total for this item
+        return self.product.price * self.quantity
+
+class ShoppingCart:
+    def __init__(self):
+        self.items = []  # Initialize an empty list of items
+
+    def add_item(self, product, quantity):
+        # Add a new CartItem to the shopping cart
+        item = CartItem(product, quantity)
+        self.items.append(item)
+        print(f"Added {quantity} of {product.name} to the cart.")
+
+    def view_cart(self):
+        # Display all items in the cart
+        if not self.items:
+            print("Your cart is empty.")
+        else:
+            print("Items in your cart:")
+            for item in self.items:
+                item_total = item.item_total()
+                print(f"Product: {item.product.name}, Price: ${item.product.price}, Quantity: {item.quantity}, Item Total: ${item_total}")
+
+    def calculate_total(self):
+        # Calculate the total price for all items in the cart
+        total = sum(item.item_total() for item in self.items)
+        print(f"Total Cart Price: ${total}")
+
+# Example usage
+product1 = Product("Apple", 2.5, 50)
+product2 = Product("Banana", 1.0, 100)
+
+# Display products
+product1.display_product()
+product2.display_product()
+
+# Create a shopping cart
+cart = ShoppingCart()
+
+# Add items to the cart
+cart.add_item(product1, 3)  # 3 Apples
+cart.add_item(product2, 5)  # 5 Bananas
+
+# View cart and calculate total
+cart.view_cart()
+cart.calculate_total()
+
 	
